@@ -13,7 +13,6 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import eis from './EIS.png'
 import { Fab, makeStyles } from '@mui/material';
 
@@ -53,14 +52,19 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar component="nav" sx={{background: 'white', color:'black', height: '80px'}}>
         <Toolbar>
+          <Box sx={{ display: {sm: 'none'}, marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
+                <a href='#'>
+                    <img src={eis} alt="" draggable={false} />
+                </a>
+          </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, fontSize: 80 }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{fontSize: 40, marginTop: "10px" }} />
           </IconButton>
           <Typography
             variant="h6"
@@ -80,13 +84,13 @@ function DrawerAppBar(props) {
                 {item}
               </Button>
             ))*/}
-            <Fab variant="extended" href="#" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="#" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 About Us
             </Fab>
-            <Fab variant="extended" href="#" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="#" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Our Services
             </Fab>
-            <Fab variant="extended" href="#" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="#" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Contact Sales
             </Fab>
           </Box>
@@ -96,6 +100,7 @@ function DrawerAppBar(props) {
       <Box component="nav">
         <Drawer
           container={container}
+          anchor="right"
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -116,10 +121,6 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
