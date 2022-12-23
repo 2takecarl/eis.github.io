@@ -67,7 +67,7 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <Box sx={{ marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '300px'} }}>
+            <Box sx={{ marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
                 <a href='#'>
                     <img src={eis} alt="" draggable={false} />
                 </a>
@@ -80,13 +80,13 @@ function DrawerAppBar(props) {
                 {item}
               </Button>
             ))*/}
-            <Fab variant="extended" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: '140px', marginRight: '25px'}}>
-                About us
+            <Fab variant="extended" href="#" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                About Us
             </Fab>
-            <Fab variant="extended" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: '160px', marginRight: '25px'}}>
+            <Fab variant="extended" href="#" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Our Services
             </Fab>
-            <Fab variant="extended" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: '180px', marginRight: '310px'}}>
+            <Fab variant="extended" href="#" disableElevation sx={{backgroundColor: '#fff', color: '#314EA0', fontSize: '1rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Contact Sales
             </Fab>
           </Box>
