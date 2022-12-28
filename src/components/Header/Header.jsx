@@ -13,11 +13,28 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import eis from './EIS.png'
-import { Fab, makeStyles } from '@mui/material';
+import ecs from './ECS.png'
+import { Fab, makeStyles, Slide, useScrollTrigger } from '@mui/material';
 
 const drawerWidth = 240;
 const navItems = ['About Us', 'Our Services', 'Contact Sales'];
+
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -30,7 +47,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        EIS
+        ECS
       </Typography>
       <Divider />
       <List>
@@ -50,11 +67,12 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
+      <HideOnScroll {...props}>
       <AppBar component="nav" sx={{background: 'white', color:'black', height: '80px'}}>
         <Toolbar>
           <Box sx={{ display: {sm: 'none'}, marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
                 <a href='#'>
-                    <img src={eis} alt="" draggable={false} />
+                    <img src={ecs} alt="" draggable={false} width="30%" height="30%" />
                 </a>
           </Box>
           <IconButton
@@ -71,9 +89,9 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <Box sx={{ marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
-                <a href='#'>
-                    <img src={eis} alt="" draggable={false} />
+            <Box sx={{textDecoration: 'none', marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
+                <a href='/'>
+                  <img src={ecs} alt="" draggable={false} width="15%" height="15%" />
                 </a>
             </Box>
           </Typography>
@@ -84,19 +102,20 @@ function DrawerAppBar(props) {
                 {item}
               </Button>
             ))*/}
-            <Fab variant="extended" href="#" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="/about" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 About Us
             </Fab>
-            <Fab variant="extended" href="#" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="/services" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Our Services
             </Fab>
-            <Fab variant="extended" href="#" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="/contact" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Contact Sales
             </Fab>
           </Box>
           
         </Toolbar>
       </AppBar>
+      </HideOnScroll>
       <Box component="nav">
         <Drawer
           container={container}

@@ -12,55 +12,74 @@ const StyledButton = styled(Button)(`
   text-transform: none;
 `);
 
+
 const Hero = () => {
   return (
     <Box sx={{marginTop: '100px'}}>
-        <Box sx={{marginLeft: '340px', marginTop: '200px', fontSize: '3.7rem', fontWeight: '700', color: '#1D3D6C'}}>
+        
+        <Box sx={{display: 'flex', flexDirection: 'column', textAlign: 'center', fontSize: '5.25rem', color: '#1D3D6C', fontWeight: '700'}}>
             <Box>
-                Leader in Translation and
+                European Conference Solutions 
             </Box>
-            <Box sx={{marginTop: '-20px'}}>
-                Interpretation Services
-            </Box>
-        </Box>
-        <Box sx={{marginLeft: '340px', fontSize: '1.25rem', marginTop: '10px'}}>
-            <Box>
-                European Interpretation Services is an internationally recognized leader in multilingual
-            </Box>
-            <Box>
-                translation and interpretation services with expert linguists all around the globe
-            </Box>
-        </Box>
-
-        <StyledButton size='large' sx={{borderRadius: 28, backgroundColor: '#EDF1F6', paddingLeft: '20px', paddingRight: '20px', fontFamily: `"Source Sans Pro", sans-serif`, marginLeft: '340px', marginTop: '20px', fontWeight: '600', fontSize: '1.35rem', color: '#315EA0'}}>
-            Book a consultation    
-        </StyledButton>        
-
-        <Box>
-            <Box sx={{color: '#7C7C7C', fontSize: '1.1rem', marginLeft: '690px', marginTop: '160px', fontFamily: `"Source Sans Pro", sans-serif`}}>
-                Using cutting edge technology for real time interpretation on the most used communication platforms
-            </Box>
-            <Box sx={{marginLeft: '600px', marginTop: '30px', display: 'flex', justifyContent: 'space-around', maxWidth: '900px'}}>
-                <Box sx={{marginLeft: '400px', marginTop: '-5px'}}>
-                    <img src={teams} alt="" draggable={false} />
+            <Box sx={{fontSize: '3rem', marginTop: '20px'}}>
+                <Box>
+                    Online, Hybrid, Onsight Events 
                 </Box>
-                <Box sx={{marginLeft: '20px'}}>
-                    <img src={zoom} alt="" draggable={false} />
-                </Box>
-                <Box sx={{marginLeft: '20px'}}>
-                    <img src={meet} alt="" draggable={false} />
-                </Box>
-                <Box sx={{marginLeft: '20px', marginTop: '-5px'}}>
-                    <img src={skype} alt="" draggable={false} />
+                <Box sx={{marginTop: '-10px'}}>
+                    with Simultaneous Interpretation
                 </Box>
             </Box>
         </Box>
 
-        <Box>
-            <Box sx={{position: 'fixed', color: '#DEF4F1'}}>
-                <img src={circle} alt="" width="100%" height="100%" />
+        <Box sx={{fontSize: '1.25rem', textAlign: 'center', marginLeft: '100px', marginRight: '100px'}}>
+            With our leading technology you will get the best onsight / hybrid / virtual event. We are specialized in EWC's with more than 20 years experience in the organization of European Works Councils. We collaborate with technical suppliers all over Europe and have an exhaustive team of high-tech Conference Interpreters.
+        </Box>
+
+        <Box sx={{display: 'flex', justifyContent: 'center'}}>
+            <StyledButton href="/contact" draggable={false} size='large' sx={{borderRadius: 28, backgroundColor: '#EDF1F6', paddingLeft: '20px', paddingRight: '20px', fontFamily: `"Source Sans Pro", sans-serif`, marginTop: '20px', fontWeight: '600', fontSize: '1.35rem', color: '#315EA0'}}>
+                Get a Quote    
+            </StyledButton>        
+        </Box>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', color: 'white'}}>
+            <Box sx={{backgroundColor: '#3DBEAF', width: '28%', height: '420px'}}>
+                <Box sx={{fontSize: '2rem', textAlign: 'center', marginTop: '20px'}}>
+                    Online Event
+                </Box>
+                <Box sx={{marginLeft: '12%', marginRight: '12%', marginTop: '40px', fontSize: '1.15rem'}}>
+                    A fully virtual meeting where the participants connect remotely via their own devices recieving interpretation in their headphones.
+                </Box>
+            </Box>
+            <Box sx={{backgroundColor: '#315EA0', width: '28%', height: '420px'}}>
+                <Box sx={{fontSize: '2rem', textAlign: 'center', marginTop: '20px'}}>
+                    Hybrid Event
+                </Box>
+                <Box sx={{marginLeft: '12%', marginRight: '12%', marginTop: '40px', fontSize: '1.15rem'}}>
+                    An onsight meeting with participants at the venue with interpretation remotely via their mobile phones. Possibility for participants to connect remotely.
+                </Box>
+            </Box>
+            <Box sx={{backgroundColor: '#1D3D6C', width: '28%', height: '420px'}}>
+                <Box sx={{fontSize: '2rem', textAlign: 'center', marginTop: '20px'}}>
+                    Onsight Event
+                </Box>
+                <Box sx={{marginLeft: '12%', marginRight: '12%', marginTop: '40px', fontSize: '1.15rem'}}>
+                    Participants and interpreters present at the venue. Convenient as onsight technical equipment is used. Interpreters work from booths.
+                </Box>
             </Box>
         </Box>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
     </Box>
   )
 }
