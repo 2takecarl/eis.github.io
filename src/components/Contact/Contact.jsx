@@ -21,10 +21,10 @@ const Contact = () => {
 return (
     <div>
       <Grid sx={{marginTop: '150px'}}>
-        <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
+        <Card style={{ maxWidth: 650, padding: "40px 5px", margin: "0 auto" }}>
           <CardContent>
             <Typography gutterBottom variant="h5">
-              Contact Us
+              Get a Quote
           </Typography> 
             <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
               Fill up the form and our team will get back to you within 24 hours.

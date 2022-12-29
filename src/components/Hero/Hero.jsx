@@ -19,7 +19,7 @@ const Hero = () => {
         
         <Box sx={{display: 'flex', flexDirection: 'column', textAlign: 'center', fontSize: '5.25rem', color: '#1D3D6C', fontWeight: '700'}}>
             <Box>
-                European Conference Solutions 
+                European Conference Solutions
             </Box>
             <Box sx={{fontSize: '3rem', marginTop: '20px'}}>
                 <Box>
@@ -31,7 +31,7 @@ const Hero = () => {
             </Box>
         </Box>
 
-        <Box sx={{fontSize: '1.25rem', textAlign: 'center', marginLeft: '100px', marginRight: '100px'}}>
+        <Box sx={{fontSize: '1.25rem', textAlign: 'center', marginLeft: {xs: '50px', md: '100px'}, marginRight: {xs: '50px', md:'100px'}}}>
             With our leading technology you will get the best onsight / hybrid / virtual event. We are specialized in EWC's with more than 20 years experience in the organization of European Works Councils. We collaborate with technical suppliers all over Europe and have an exhaustive team of high-tech Conference Interpreters.
         </Box>
 
@@ -48,7 +48,7 @@ const Hero = () => {
         <br />
 
         <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', color: 'white'}}>
-            <Box sx={{backgroundColor: '#3DBEAF', width: '28%', height: '420px'}}>
+            <Box sx={{backgroundColor: '#3DBEAF', width: '28%', height: {sm: '560px', md:'420px'}}}>
                 <Box sx={{fontSize: '2rem', textAlign: 'center', marginTop: '20px'}}>
                     Online Event
                 </Box>
@@ -56,7 +56,7 @@ const Hero = () => {
                     A fully virtual meeting where the participants connect remotely via their own devices recieving interpretation in their headphones.
                 </Box>
             </Box>
-            <Box sx={{backgroundColor: '#315EA0', width: '28%', height: '420px'}}>
+            <Box sx={{backgroundColor: '#315EA0', width: '28%', height: {sm: '560px', md:'420px'}}}>
                 <Box sx={{fontSize: '2rem', textAlign: 'center', marginTop: '20px'}}>
                     Hybrid Event
                 </Box>
@@ -64,7 +64,7 @@ const Hero = () => {
                     An onsight meeting with participants at the venue with interpretation remotely via their mobile phones. Possibility for participants to connect remotely.
                 </Box>
             </Box>
-            <Box sx={{backgroundColor: '#1D3D6C', width: '28%', height: '420px'}}>
+            <Box sx={{backgroundColor: '#1D3D6C', width: '28%', height: {sm: '560px', md:'420px'}}}>
                 <Box sx={{fontSize: '2rem', textAlign: 'center', marginTop: '20px'}}>
                     Onsight Event
                 </Box>

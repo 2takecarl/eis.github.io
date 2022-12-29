@@ -13,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import ecs from './ECS.png'
+import ecs from './logo.png'
 import { Fab, makeStyles, Slide, useScrollTrigger } from '@mui/material';
 
 const drawerWidth = 240;
@@ -47,17 +47,30 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        ECS
+        <a href='/'>
+          <img src={ecs} alt="" draggable={false} width="150px" height="50px" />
+        </a>
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {/*{navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
-          </ListItem>
-        ))}
+        </ListItem>
+        ))}*/}
+        <Box sx={{display: 'flex', flexDirection: 'column'}}>
+            <Fab variant="extended" href="/about" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                About Us
+            </Fab>
+            <Fab variant="extended" href="/services" disableElevation sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                Our Services
+            </Fab>
+            <Fab variant="extended" href="/contact" disableElevation sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                Contact Sales
+            </Fab>
+        </Box>
       </List>
     </Box>
   );
@@ -67,31 +80,36 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <HideOnScroll {...props}>
       <AppBar component="nav" sx={{background: 'white', color:'black', height: '80px'}}>
         <Toolbar>
-          <Box sx={{ display: {sm: 'none'}, marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
-                <a href='#'>
-                    <img src={ecs} alt="" draggable={false} width="30%" height="30%" />
+          <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+            <Box sx={{ display: { sm: 'none', md: 'none'}, textDecoration: 'none', marginTop: '10px', marginLeft: {sm: '0px', md: '98px', lg: '200px', xl: '300px'} }}>
+                <a href='/'>
+                    <img src={ecs} alt="" draggable={false} width="150px" height="50px" />
                 </a>
+            </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' }, fontSize: 80 }}
+            >
+              <MenuIcon sx={{fontSize: 40, marginTop: "10px" }} />
+            </IconButton>
           </Box>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, fontSize: 80 }}
-          >
-            <MenuIcon sx={{fontSize: 40, marginTop: "10px" }} />
-          </IconButton>
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <Box sx={{textDecoration: 'none', marginTop: '15px', marginLeft: {sm: '0px', md: '100px', lg: '200px', xl: '300px'} }}>
+            <Box sx={{ display: {xs: 'none', sm: 'none', md: 'block'}, textDecoration: 'none', marginTop: '10px', marginLeft: {sm: '0px', md: '98px', lg: '200px', xl: '300px'} }}>
                 <a href='/'>
-                  <img src={ecs} alt="" draggable={false} width="15%" height="15%" />
+                    <img src={ecs} alt="" draggable={false} width="175px" height="59px" />
+                </a>
+            </Box>
+            <Box sx={{ display: {xs: 'none', sm: 'block', md: 'none'}, textDecoration: 'none', marginTop: '10px', marginLeft: {sm: '0px', md: '98px', lg: '200px', xl: '300px'} }}>
+                <a href='/'>
+                    <img src={ecs} alt="" draggable={false} width="150px" height="50px" />
                 </a>
             </Box>
           </Typography>
@@ -115,7 +133,6 @@ function DrawerAppBar(props) {
           
         </Toolbar>
       </AppBar>
-      </HideOnScroll>
       <Box component="nav">
         <Drawer
           container={container}
