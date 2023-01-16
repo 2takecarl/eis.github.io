@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import ecs from './logo.png'
 import { Fab, makeStyles, Slide, useScrollTrigger } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['About Us', 'Our Services', 'Contact Sales'];
@@ -61,13 +62,13 @@ function DrawerAppBar(props) {
         </ListItem>
         ))}*/}
         <Box sx={{display: 'flex', flexDirection: 'column'}}>
-            <Fab variant="extended" href="/about" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="/about"  sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 About Us
             </Fab>
-            <Fab variant="extended" href="/services" disableElevation sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="/services"  sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Our Services
             </Fab>
-            <Fab variant="extended" href="/contact" disableElevation sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended" href="/contact"  sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
                 Contact Sales
             </Fab>
         </Box>
@@ -108,9 +109,9 @@ function DrawerAppBar(props) {
                 </a>
             </Box>
             <Box sx={{ display: {xs: 'none', sm: 'block', md: 'none'}, textDecoration: 'none', marginTop: '10px', marginLeft: {sm: '0px', md: '98px', lg: '200px', xl: '300px'} }}>
-                <a href='/'>
+                <Link to="/">
                     <img src={ecs} alt="" draggable={false} width="150px" height="50px" />
-                </a>
+                </Link>
             </Box>
           </Typography>
           
@@ -120,14 +121,20 @@ function DrawerAppBar(props) {
                 {item}
               </Button>
             ))*/}
-            <Fab variant="extended" href="/about" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
-                About Us
+            <Fab variant="extended"  sx={{ fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                  <Link to="/about" style={{textDecoration: "inherit", color: 'inherit'}}>
+                    About Us
+                  </Link>
             </Fab>
-            <Fab variant="extended" href="/services" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
-                Our Services
+            <Fab variant="extended" sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                <Link to="/services" style={{textDecoration: "inherit", color: 'inherit'}}>
+                  Our Services
+                </Link>
             </Fab>
-            <Fab variant="extended" href="/contact" disableElevation sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+            <Fab variant="extended"  sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: {sm: '1.1rem',md:'1.25rem'}, textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+              <Link to="/contact" style={{textDecoration: "inherit", color: 'inherit'}}>
                 Contact Sales
+              </Link>
             </Fab>
           </Box>
           
