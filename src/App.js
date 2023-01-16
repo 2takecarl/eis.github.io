@@ -3,11 +3,11 @@ import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Services from './components/Services/Services'
-import { Routes, Route, HashRouter} from 'react-router-dom';
+import { HashRouter as Routes, Route, Router} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <Header />
       <Routes>
         <Route path='/' element={<Hero />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/services' element={<Services />} />
       </Routes>
-    </HashRouter>
+    </Router>
   );
 }
 
