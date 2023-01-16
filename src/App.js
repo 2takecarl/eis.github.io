@@ -7,7 +7,7 @@ import { HashRouter as Routes, Route, Router} from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <Routes>
         <Route path='/' element={<Hero />} />
