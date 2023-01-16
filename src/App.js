@@ -7,13 +7,13 @@ import { Routes, Route, HashRouter} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <Routes>
-        <Route path='/eis.github.io/' element={<Hero />} />
-        <Route path='/eis.github.io/about' element={<About />} />
-        <Route path='/eis.github.io/contact' element={<Contact />} />
-        <Route path='/eis.github.io/services' element={<Services />} />
+        <Route path='/' element={<Hero />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/services' element={<Services />} />
       </Routes>
     </HashRouter>
   );
