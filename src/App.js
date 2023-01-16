@@ -3,7 +3,7 @@ import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Services from './components/Services/Services'
-import { HashRouter as Routes, Route, Router} from 'react-router-dom';
+import { BrowserRouter as Routes, Route, Router} from 'react-router-dom';
 
 function App() {
   return (
