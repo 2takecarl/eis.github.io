@@ -7,10 +7,10 @@ import { BrowserRouter as Routes, Route, Router} from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/eis.github.io'>
       <Header />
       <Routes>
-        <Route path='/' element={<Hero />} />
+        <Route exact path='/' element={<Hero />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/services' element={<Services />} />
