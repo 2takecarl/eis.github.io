@@ -6,7 +6,7 @@ const Services = () => {
 
     return (
         <Box sx={{marginTop: '150px', display: 'flex', flexDirection:{xs: 'column', lg:'row'}}}>
-            <Box sx={{textAlign:{xs: 'center', lg:'left'}, mx:"40px"}}>
+            <Box sx={{textAlign:{xs: 'center', lg:'left'}, ml:{lg: "150px", xs:'25%'}, mr:'40px'}}>
                 <Box sx={{fontSize: '2rem', fontWeight: '700'}}>
                     One stop for all your language needs
                 </Box>
