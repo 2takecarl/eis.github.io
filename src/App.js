@@ -7,7 +7,7 @@ import { Routes, Route, HashRouter} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename='/eis.github.io'>
       <Header />
       <Routes>
         <Route path='/' element={<Hero />} />
