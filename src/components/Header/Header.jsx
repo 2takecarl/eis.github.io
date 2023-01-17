@@ -109,7 +109,7 @@ function DrawerAppBar(props) {
                 </a>
             </Box>
             <Box sx={{ display: {xs: 'none', sm: 'block', md: 'none'}, textDecoration: 'none', marginTop: '10px', marginLeft: {sm: '0px', md: '98px', lg: '200px', xl: '300px'} }}>
-                <Link to="/">
+                <Link to="#/">
                     <img src={ecs} alt="" draggable={false} width="150px" height="50px" />
                 </Link>
             </Box>
