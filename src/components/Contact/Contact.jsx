@@ -1,11 +1,16 @@
 import React from 'react';
 import { useRef } from 'react';
-import { Grid, TextField, Button, Card, CardContent, Typography } from '@mui/material';
+import { Grid, TextField, Button, Card, CardContent, Typography, Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import emailjs from '@emailjs/browser';
 const Contact = () => {
 
-    const form = useRef();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,6 +25,11 @@ const Contact = () => {
 
 return (
     <div>
+      <Modal open={open} onClose={handleClose}>
+        <Box>
+          Success
+        </Box>
+      </Modal>
       <Grid sx={{marginTop: '150px'}}>
         <Card style={{ maxWidth: 650, padding: "40px 5px", margin: "0 auto" }}>
           <CardContent>
@@ -52,6 +62,8 @@ return (
           </CardContent>
         </Card>
       </Grid>
+
+      <Button variant="contained" color="primary" fullwidth onClick={open ? setOpen=false : setOpen=true}>Modal</Button>
     </div>
   );
 }
