@@ -62,14 +62,20 @@ function DrawerAppBar(props) {
         </ListItem>
         ))}*/}
         <Box sx={{display: 'flex', flexDirection: 'column'}}>
-            <Fab variant="extended" href="/about"  sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
-                About Us
+            <Fab variant="extended" sx={{fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '110px', md: '140px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                <Link to="/about">
+                  About Us
+                </Link>
             </Fab>
-            <Fab variant="extended" href="/services"  sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
-                Our Services
+            <Fab variant="extended" sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '140px',md: '160px'}, marginRight: {sm: '5px', md:'7px', lg: '25px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                <Link to="/services">
+                  Our Services
+                </Link>
             </Fab>
-            <Fab variant="extended" href="/contact"  sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
-                Contact Sales
+            <Fab variant="extended" sx={{ marginTop: '12px', fontFamily: `"Source Sans Pro", sans-serif`, backgroundColor: '#fff', color: '#315EA0', fontSize: '1.25rem', textTransform: 'capitalize', fontWeight: '550', boxShadow: 'none', width: {sm: '150px', md:'180px'}, marginRight: {sm: '-5px',md: '85px', lg: '160px',xl: '310px'}, "&:hover":{backgroundColor: '#EDF1F6'}, "&:active": {boxShadow: '0'}}}>
+                <Link to="/contact">
+                  Contact Sales
+                </Link>
             </Fab>
         </Box>
       </List>
