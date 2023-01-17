@@ -38,7 +38,7 @@ const Hero = () => {
 
         <Box sx={{display: 'flex', justifyContent: 'center'}}>
             <StyledButton draggable={false} size='large' sx={{borderRadius: 28, backgroundColor: '#EDF1F6', paddingLeft: '20px', paddingRight: '20px', fontFamily: `"Source Sans Pro", sans-serif`, marginTop: '20px', fontWeight: '600', fontSize: '1.35rem', color: '#315EA0'}}>
-                <Link to="/contact" style={{textDecoration: "inherit", color: 'inherit'}}>
+                <Link to="/#/contact" style={{textDecoration: "inherit", color: 'inherit'}}>
                 Get a Quote
               </Link>
             </StyledButton>        
