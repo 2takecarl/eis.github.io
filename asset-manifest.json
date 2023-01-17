@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/eis.github.io/static/js/main.f65bf43f.js",
-    "static/media/img.png": "/eis.github.io/static/media/img.5adaa50c66fe27c941ac.png",
-    "index.html": "/eis.github.io/index.html",
-    "main.f65bf43f.js.map": "/eis.github.io/static/js/main.f65bf43f.js.map"
+    "main.js": "/static/js/main.e696acf0.js",
+    "static/media/img.png": "/static/media/img.5adaa50c66fe27c941ac.png",
+    "index.html": "/index.html",
+    "main.e696acf0.js.map": "/static/js/main.e696acf0.js.map"
   },
   "entrypoints": [
-    "static/js/main.f65bf43f.js"
+    "static/js/main.e696acf0.js"
   ]
 }
