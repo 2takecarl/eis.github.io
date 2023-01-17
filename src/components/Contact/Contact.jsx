@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useRef } from 'react';
 import { Grid, TextField, Button, Card, CardContent, Typography, Modal } from '@mui/material';
 import { Box } from '@mui/system';
