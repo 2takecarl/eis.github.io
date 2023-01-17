@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useRef } from 'react';
 import { Grid, TextField, Button, Card, CardContent, Typography, Modal } from '@mui/material';
 import { Box } from '@mui/system';
@@ -25,6 +25,7 @@ const Contact = () => {
 
 return (
     <div>
+      <Button onClick={handleOpen}>open modal</Button>
       <Modal open={open} onClose={handleClose}>
         <Box>
           Success
@@ -63,7 +64,6 @@ return (
         </Card>
       </Grid>
 
-      <Button variant="contained" color="primary" fullwidth onClick={open ? setOpen=false : setOpen=true}>Modal</Button>
     </div>
   );
 }
