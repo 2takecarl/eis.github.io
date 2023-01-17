@@ -85,9 +85,9 @@ function DrawerAppBar(props) {
         <Toolbar>
           <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
             <Box sx={{ display: { sm: 'none', md: 'none'}, textDecoration: 'none', marginTop: '10px', marginLeft: {sm: '0px', md: '98px', lg: '200px', xl: '300px'} }}>
-                <a href='/'>
+                <Link href='/'>
                     <img src={ecs} alt="" draggable={false} width="150px" height="50px" />
-                </a>
+                </Link>
             </Box>
             <IconButton
               color="inherit"
