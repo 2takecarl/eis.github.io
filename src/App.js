@@ -7,7 +7,7 @@ import { Routes, Route, HashRouter, Link} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
         <Header />
         <Routes>
           <Route path="/" element={<Hero />} />
