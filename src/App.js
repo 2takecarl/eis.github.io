@@ -7,10 +7,10 @@ import { Routes, Route, HashRouter, Link} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter basename="/#">
+    <HashRouter basename="/">
         <Header />
         <Routes>
-          <Route path="/#" element={<Hero />} />
+          <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
