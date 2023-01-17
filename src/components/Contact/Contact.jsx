@@ -3,6 +3,20 @@ import { useRef } from 'react';
 import { Grid, TextField, Button, Card, CardContent, Typography, Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import emailjs from '@emailjs/browser';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: "lightGreen",
+  border: "0px 0px 10px 0px solid green",
+  boxShadow: 24,
+  p: 4,
+};
+
+
 const Contact = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -41,9 +55,14 @@ return (
       <br />
       <br />
       <Button onClick={handleOpen}>open modal</Button>
-      <Modal open={open} onClose={handleClose}>
-        <Box>
-          Success
+      <Modal open={open} onClose={handleClose} style={{}}>
+        <Box sx={style}>
+          <Box fontSize="1.5rem">
+            Sucess
+          </Box>
+          <Box fontSize="1rem">
+            Your message has been sent!
+          </Box>
         </Box>
       </Modal>
       <Grid sx={{marginTop: '150px'}}>
