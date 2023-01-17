@@ -7,7 +7,7 @@ import { Routes, Route, HashRouter, Link} from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Hero />} />
