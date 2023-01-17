@@ -10,7 +10,7 @@ function App() {
     <HashRouter basename="/">
         <Header />
         <Routes>
-          <Route basename="/eis.github.io" path="/" element={<Hero />} />
+          <Route exact path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
