@@ -39,22 +39,6 @@ const Contact = () => {
 
 return (
     <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <Button onClick={handleOpen}>open modal</Button>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <Box fontSize="1.5rem">
@@ -93,7 +77,7 @@ return (
                   <TextField label="Message" name="message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary"  fullWidth>Submit</Button>
+                  <Button type="submit" variant="contained" color="primary" onSubmit={handleOpen}  fullWidth>Submit</Button>
                 </Grid>
 
               </Grid>
