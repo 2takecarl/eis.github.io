@@ -10,8 +10,8 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: "#315EA0",
-  borderLeft: "7px solid #3DBEAF",
+  bgcolor: "#3DBEAF",
+  borderLeft: "7px solid #315EA0",
   boxShadow: 24,
   p: 4,
 };
@@ -63,7 +63,7 @@ return (
           <Box fontSize="1rem">
             Your message has been sent!
           </Box>
-          <Button variant="outlined">
+          <Button mb="-10px" mt="10px" variant="outlined">
             Ok
           </Button>
         </Box>
