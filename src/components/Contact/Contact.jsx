@@ -11,7 +11,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: "lightGreen",
-  border: "0px 0px 10px 0px solid green",
+  borderLeft: "7px solid green",
   boxShadow: 24,
   p: 4,
 };
@@ -58,7 +58,7 @@ return (
       <Modal open={open} onClose={handleClose} style={{}}>
         <Box sx={style}>
           <Box fontSize="1.5rem">
-            Sucess
+            Success
           </Box>
           <Box fontSize="1rem">
             Your message has been sent!
