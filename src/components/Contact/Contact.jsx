@@ -24,7 +24,7 @@ const Contact = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
-    $("#my-custom-contact-form")[0].reset();
+    document.getElementById("my-custom-contact-form").reset();
   }
 
   const form = useRef();
