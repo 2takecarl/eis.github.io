@@ -21,7 +21,10 @@ const Contact = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    setOpen(true);
+    
+  }
   const handleClose = () => setOpen(false);
 
   const form = useRef();
@@ -32,6 +35,7 @@ const Contact = () => {
     emailjs.sendForm('service_h7zo5hr', 'template_n8rm7wo', form.current, 'UuhAD5ILVgOZSsnye')
       .then((result) => {
           console.log(result.text);
+          handleOpen();
       }, (error) => {
           console.log(error.text);
       });
@@ -77,7 +81,7 @@ return (
                   <TextField label="Message" name="message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button type="submit" variant="contained" color="primary" onSubmit={handleOpen}  fullWidth>Submit</Button>
+                  <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
                 </Grid>
 
               </Grid>
