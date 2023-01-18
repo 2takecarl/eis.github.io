@@ -10,8 +10,8 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: "lightGreen",
-  borderLeft: "7px solid green",
+  bgcolor: "#315EA0",
+  borderLeft: "7px solid #3DBEAF",
   boxShadow: 24,
   p: 4,
 };
@@ -63,6 +63,9 @@ return (
           <Box fontSize="1rem">
             Your message has been sent!
           </Box>
+          <Button variant="outlined">
+            Ok
+          </Button>
         </Box>
       </Modal>
       <Grid sx={{marginTop: '150px'}}>
