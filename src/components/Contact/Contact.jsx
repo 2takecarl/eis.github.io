@@ -21,11 +21,11 @@ const Contact = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-    
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false);
+    $("#my-custom-contact-form")[0].reset();
   }
-  const handleClose = () => setOpen(false);
 
   const form = useRef();
 
@@ -66,7 +66,7 @@ return (
             <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
               Fill up the form and our team will get back to you within 24 hours.
           </Typography> 
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail} id="my-custom-contact-form">
               <Grid container spacing={1}>
                 <Grid xs={12} sm={6} item>
                   <TextField placeholder="Enter first name" name="user_name" label="First Name" variant="outlined" fullWidth required />
