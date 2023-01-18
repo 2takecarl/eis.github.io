@@ -10,8 +10,8 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: "#3DBEAF",
-  borderLeft: "7px solid #315EA0",
+  bgcolor: "#AAFFA6",
+  borderLeft: "7px solid #55FF4D",
   boxShadow: 24,
   p: 4,
 };
@@ -55,7 +55,7 @@ return (
       <br />
       <br />
       <Button onClick={handleOpen}>open modal</Button>
-      <Modal open={open} onClose={handleClose} style={{}}>
+      <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
           <Box fontSize="1.5rem">
             Success
@@ -63,7 +63,8 @@ return (
           <Box fontSize="1rem">
             Your message has been sent!
           </Box>
-          <Button mb="-10px" mt="10px" variant="outlined">
+          <br />
+          <Button mb="-30px" variant="outlined" onClick={handleClose}>
             Ok
           </Button>
         </Box>
